@@ -1,0 +1,126 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+$title-stack: 'Poppins', sans-serif
+$subtitle-stack: 'Playfair Display', serif
+
+// colors
+$dark: #333
+$light: #fff
+
+
+// mobile
+$mobile-width: 1100px
+
+@mixin mobile
+  @media (max-width: #{$mobile-width})
+    @content
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  pointer-events: none
+  overflow-x: hidden
+
+a
+  pointer-events: auto
+
+.burger
+  pointer-events: auto
+  cursor: pointer
+
+header 
+  nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-height: 8vh
+    color: #fff
+    background: linear-gradient(135deg, #000 0%, #000 40%, #fff 40.000001%, #fff 100%)
+    font-family: 'Playfair Display', serif
+    
+    .brand a
+      font-size: 3em
+      color: white
+      text-decoration: none
+
+      i
+        padding-right: 10
+
+      img
+        height: 6vh
+        margin: auto 0
+
+    ul
+      list-style-type: none
+      display: flex
+      justify-content: space-around
+      width: 50%
+      font-family: $title-stack
+      font-weight: 400
+      text-transform: uppercase
+      overflow: hidden
+
+      li
+        padding: 5px 10px
+
+        a
+          color: #000
+          text-decoration: none
+
+      .login
+        padding: 4px 5px
+        border: 2px solid black
+
+    .burger
+      display: none
+
+      div
+        width: 25px
+        height: 3px
+        background-color: $dark
+        margin: 5px
+
+        transition: all 0.3s ease
+
+  @include mobile
+    nav
+      background: linear-gradient(135deg, #000 0%, #000 65%, #fff 65.000001%, #fff 100%)
+
+    ul
+      z-index: 1
+      transform: translatex(100%)
+      position: absolute
+      right: 0%
+      top: 8vh
+      height: 50vh
+      width: 100% !important
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: $dark
+      transition: transform 0.5s ease-in
+
+      li
+        a
+          color: $light !important
+          font-size: 1.5em
+      
+      .login
+        border: none !important
+
+    .burger
+      display: block !important
+
+      &.toggle
+        .line1
+          transform: rotate(-45deg) translate(-5px, 6px)
+        
+        .line2
+          opacity: 0
+        
+        .line3
+          transform: rotate(45deg) translate(-5px, -6px)
+      
+.nav-active
+  transform: translateX(0%) !important

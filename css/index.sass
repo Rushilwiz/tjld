@@ -1,0 +1,63 @@
+@import "base"
+  
+.hero-wrapper
+  color: $light
+  position: relative
+  width: 100vw
+  height: 100vh
+  background-image: linear-gradient(to left, #090B08, 50%, #f0eddf, 75%, #fff)
+  @include mobile
+    background: none
+
+.hero
+  height: 100%
+  width: 100%
+  background-size: 55em
+  background-repeat: no-repeat
+  background-position: 100% 50%
+  background-image: url("/css/res/lincoln-trans.png")
+
+  @include mobile
+    background-size: 120%
+    background-repeat: no-repeat
+    background-position: 50% 0%
+    background-image: url("/css/res/lincoln-mobile.png")
+
+#hero
+  position: absolute
+  top: 10%
+  left: 5%
+
+  h1
+    font-family: $title-stack
+    text-align: left
+    font-size: 6em
+    line-height: 1.2em
+    color: $dark
+    overflow: hidden
+  
+  h2
+    font-family: $subtitle-stack
+    text-align: left
+    font-size: 2em
+    line-height: 1.2em
+    color: $dark
+    overflow: hidden
+  
+  @include mobile
+    top: 55%
+
+    h1
+      color: $light
+      font-size: 4em
+    
+    h2
+      color: $light
+
+
+    
+.introduction
+  color: $light
+  position: relative
+  width: 100%
+  height: 100%

@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  pointer-events: none;
+  overflow: hidden !important;
+}
+
+a {
+  pointer-events: auto;
+}
+
+.burger {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  color: #fff;
+  background: linear-gradient(135deg, #000 0%, #000 40%, #fff 40.0%, #fff 100%);
+  font-family: 'Playfair Display', serif;
+}
+
+header nav .brand a {
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+header nav .brand a i {
+  padding-right: 10;
+}
+
+header nav .brand a img {
+  height: 6vh;
+  margin: auto 0;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+header nav ul li {
+  padding: 5px 10px;
+}
+
+header nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+header nav ul .login {
+  padding: 4px 5px;
+  border: 2px solid black;
+}
+
+header nav .burger {
+  display: none;
+}
+
+header nav .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  header nav {
+    background: linear-gradient(135deg, #000 0%, #000 65%, #fff 65.0%, #fff 100%);
+  }
+  header ul {
+    z-index: 1;
+    -webkit-transform: translatex(100%);
+            transform: translatex(100%);
+    position: absolute;
+    right: 0%;
+    top: 8vh;
+    height: 50vh;
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #333;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  header ul li a {
+    color: #fff !important;
+    font-size: 1.5em;
+  }
+  header ul .login {
+    border: none !important;
+  }
+  header .burger {
+    display: block !important;
+  }
+  header .burger.toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  header .burger.toggle .line2 {
+    opacity: 0;
+  }
+  header .burger.toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
+.hero-wrapper {
+  color: #fff;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, right top, left top, from(#090B08), color-stop(50%), color-stop(#f0eddf), color-stop(75%), to(#fff));
+  background-image: linear-gradient(to left, #090B08, 50%, #f0eddf, 75%, #fff);
+}
+
+@media (max-width: 1100px) {
+  .hero-wrapper {
+    background: none;
+  }
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  background-size: 55em;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-image: url("/css/res/lincoln-trans.png");
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-image: url("/css/res/lincoln-mobile.png");
+  }
+}
+
+#hero {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+#hero h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  font-size: 6em;
+  line-height: 1.2em;
+  color: #333;
+  overflow: hidden;
+}
+
+#hero h2 {
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  font-size: 2em;
+  line-height: 1.2em;
+  color: #333;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  #hero {
+    top: 55%;
+  }
+  #hero h1 {
+    color: #fff;
+    font-size: 4em;
+  }
+  #hero h2 {
+    color: #fff;
+  }
+}
+
+.introduction {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=index.css.map */
