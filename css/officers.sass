@@ -7,7 +7,13 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
+  align-content: center
+  justify-content: center
   width: 100%
+  margin-bottom: 2em
+
+  @include mobile
+    flex-direction: column
 
 .column 
   display: flex
@@ -19,3 +25,36 @@
   font-family: $subtitle-stack
   text-align: center
   font-size: 4em
+
+
+.profile
+  margin: 0 auto
+  text-align: center
+
+  img
+    width: 200px
+    height: 200px
+    background-color: #ffd1dc
+    border-radius: 50%
+  
+  h1
+    font-family: $title-stack
+    font-size: 1.6em
+    margin-top: 0.3em
+  
+  h2
+    font-family: $subtitle-stack
+    font-size: 1em
+  
+  p
+    font-family: sans-serif
+    width: 60%
+    margin: 0 auto
+    margin-top: 0.5em
+
+    a
+      text-decoration: none
+      color: #11c1e0
+  
+  &.single p
+    width: 30%
